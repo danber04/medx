@@ -11,7 +11,6 @@ public class TestController {
 
     @GetMapping
     public ResponseEntity<String> test() {
-        return ResponseEntity.status(200)
-                .body("Test Response from API Gateway");
+        return ResponseEntity.status(200).body("Test Response from API Gateway");
     }
 }

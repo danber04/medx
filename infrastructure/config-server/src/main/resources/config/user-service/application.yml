@@ -30,12 +30,12 @@ spring:
   flyway:
     enabled: false
 
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwks-uri: ${KEYCLOAK_JWKS_URI:http://localhost:8081/realms/medx/protocol/openid-connect/certs}
-          issuer-uri: ${KEYCLOAK_ISSUER_URI:http://localhost:8081/realms/medx}
+#  security:
+#    oauth2:
+#      resourceserver:
+#        jwt:
+#          jwks-uri: ${KEYCLOAK_JWKS_URI:http://localhost:8081/realms/medx/protocol/openid-connect/certs}
+#          issuer-uri: ${KEYCLOAK_ISSUER_URI:http://localhost:8081/realms/medx}
 
 keycloak:
   admin:

@@ -38,11 +38,17 @@ spring:
     username: ${RABBITMQ_USERNAME:guest}
     password: ${RABBITMQ_PASSWORD:guest}
 
+# health: /actuator/health = shows application health information UP/DOWN etc
+# info: /actuator/info = provides custom application metadata, such as name, description, build info etc
+# refresh: /actuator/refresh = refresh the configuration at runtime
+# busfresh: /actuator/busrefresh = distributed version of refresh, works with kafka or rabbitmq to broadcast
+# refresh events to all instances of a microservice
+# metrics: /actuator/metrics = exposes metrics like thread pools, loggers, garbage collection etc
 management:
   endpoints:
     web:
       exposure:
-        include: health, info, busrefresh, refresh, env, metrics
+        include: health, info, refresh, busrefresh, metrics
       base-path: /actuator
   endpoint:
     health:
@@ -58,11 +64,10 @@ management:
     env:
       enabled: true
   tracing:
-    sampling:
-      probability: 1.0
+    enabled: false
 
 info:
   app:
-    name: ${spring.application.name}
+    name: "Config Server"
     description: "Spring Cloud Config Server for centralized configuration management in microservices architecture"
     version: "1.0.0"

@@ -3,15 +3,18 @@ server:
 
 spring:
   application:
-    name: api-gateway
+    name: "api-gateway"
+
   main:
     # force webflux mode even with web server on classpath
     web-application-type: reactive
+
+  # Required to implement Spring Cloud Gateway's Redis-based rate limiter
   data:
     redis:
       host: ${REDIS_HOST:localhost}
       port: ${REDIS_PORT:6379}
-      database: 2
+      database: 2 # connect to redis database 2 for API Gateway rate limiting
       connect-timeout: 2000
       timeout: 1000
 
@@ -22,10 +25,9 @@ spring:
     oauth2:
       resourceserver:
         jwt:
-          jwks-uri: ${KEYCLOAK_JWKS_URI:http://localhost:8081/realms/medx/protocol/openid-connect/certs}
           issuer-uri: ${KEYCLOAK_ISSUER_URI:http://localhost:8081/realms/medx}
+          jwks-uri: ${KEYCLOAK_JWKS_URI:http://localhost:8081/realms/medx/protocol/openid-connect/certs}
 
-# Eureka — instance-id override for clarity in dashboard
 eureka:
   instance:
     instance-id: ${spring.application.name}:${server.port}
@@ -33,12 +35,9 @@ eureka:
     fetch-registry: true
     register-with-eureka: true
 
+# gateway: /actuator/gateway = provides visibility and control over all routes and filters
+# inside Spring Cloud Gateway
 management:
-  endpoints:
-    web:
-      exposure:
-        include: health, info, gateway, busrefresh, refresh, metrics, prometheus
-      base-path: /actuator
   endpoint:
     gateway:
       enabled: true
@@ -143,4 +142,5 @@ logging:
 
 info:
   app:
+    name: "API Gateway"
     description: "Centralized API Gateway providing secure routing, load balancing, and circuit breaker protection for Microservices"

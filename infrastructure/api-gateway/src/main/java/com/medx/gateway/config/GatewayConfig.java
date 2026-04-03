@@ -82,6 +82,21 @@ public class GatewayConfig {
                 )
 
                 /*
+                 * swagger documentation - user-service
+                 * http://localhost:8080/user-service/swagger-ui/index.html
+                 */
+                .route(RouteConstants.USER_SERVICE_SWAGGER, r -> r
+                        .path(
+                                "/user-service/swagger-ui/**",
+                                "/user-service/v3/api-docs/**"
+                        ).filters(f -> f
+                                .rewritePath(
+                                        "/user-service/(?<segment>.*)", "/${segment}"
+                                )
+                        ).uri(RouteConstants.SVC_USER)
+                )
+
+                /*
                  * doctor-service
                  * This route is mixed of public and protected - security config handled the authentication per path
                  * IP-based

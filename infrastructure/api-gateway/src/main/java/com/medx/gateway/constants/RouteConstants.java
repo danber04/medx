@@ -36,4 +36,7 @@ public final class RouteConstants {
 
     // Gateway identity
     public static final String SERVICE_NAME = "api-gateway";
+
+    // Swagger UI related ID's
+    public static final String USER_SERVICE_SWAGGER = "user-service-swagger";
 }

@@ -42,9 +42,13 @@ management:
       exposure:
         # Since we are not using busrefresh with rabbitmq for eureka, we don't need to
         # expose the refresh and busrefresh endpoint
-        include: health, info, metrics, prometheus
+        include: health, info, metrics
 
 logging:
   level:
     com.netflix.eureka: DEBUG
     com.netflix.discovery: DEBUG
+
+info:
+  app:
+    description: "Eureka Server - Centralized service discovery and registration hub providing dynamic service location, health monitoring, and load balancing support for distributed microservices"

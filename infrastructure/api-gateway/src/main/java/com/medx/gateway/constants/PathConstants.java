@@ -5,7 +5,7 @@ public final class PathConstants {
     private PathConstants() {
     }
 
-    private static final String API_PREFIX = RouteConstants.API_PREFIX;
+    private static final String API_PREFIX = "/api/v1";
 
     // Route path patterns (** = match everything after prefix)
     public static final String USER_PATH = API_PREFIX + "/users/**";
@@ -38,6 +38,9 @@ public final class PathConstants {
             "/actuator/health",
             "/actuator/info",
             "/fallback/**",
-            "/api-docs/**", "/v3/api-docs/**", "/swagger-ui/**", "/swagger-ui.html"
+
+            // swagger for user-service
+            "/user-service/swagger-ui/**",
+            "/user-service/v3/api-docs/**"
     };
 }
